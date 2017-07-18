@@ -1,0 +1,91 @@
+/* Spis treœci */
+/* 0.0 Zerowanie styli */
+/* 1.0 Style podstawowe */
+	/* 1.1 Typografia */
+/* 2.0 Style wielorazowe */
+
+/* 0.0 Zerowanie styli */
+	body, section, div, span, strong, em, p, a, ul, ol, li, figure, figcaption, button, input, textarea, form, label, h1, h2, h3, h4, h5, h6, header, img {
+		margin:0;
+		padding:0;
+		box-sizing:content-box;
+	}
+/* 1.0 Style podstawowe */
+	img {
+		max-width:100%;
+	}
+	body > header, main, body > footer {
+		padding:1em;
+	}
+	a {
+		text-decoration:none;
+	}
+	button {
+		background-color:transparent;
+		border:none;
+	}
+	ul {
+		list-style:none;
+	}
+	em {
+		font-style:normal;
+	}
+	/* 1.1 Typografia */
+		/* latin-ext */
+		@font-face {
+		  font-family: 'Roboto';
+		  font-style: normal;
+		  font-weight: 300;
+		  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v16/Pru33qjShpZSmG3z6VYwnRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+		  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+		}
+		body {
+			font-size:10px;
+			font-family: 'Roboto', sans-serif;
+			font-weight:300;
+		}
+		h1 {
+			font-size:2.4em;
+			text-transform:capitalize;
+			text-align:center;
+		}
+		h2{
+			font-size:2em;
+			text-transform:uppercase;
+			color:#28d851;
+		}
+		h3 {
+			font-size:1.6em;
+		}
+		h4{
+			font-size:1.2em;
+		}
+		h5{
+			font-size:1.1em;
+		}
+/* 2.0 Style wielorazowe */
+	.btn-link {
+		display: inline-block;
+		background-color: #000;
+		color: #28d851;
+		font-size: 1.6em;
+		text-align: center;
+		padding: 0.6em 1.2em;
+		border-radius: 0.5em;
+		margin-bottom:1em;
+	}
+	.btn-link:after {
+		content:"+";
+		color:#fff;
+		display:inline;
+		margin-left:0.5em;
+	}
+	.txt-biel {
+		color:#fff;
+	}
+	.txt-zielen {
+		color:#28d851;
+	}
+	.tlo-zielen {
+		background-color:#28d851;
+	}
