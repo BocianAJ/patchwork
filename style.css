@@ -18,7 +18,7 @@
 	body, section, div, span, strong, em, p, a, ul, ol, li, figure, figcaption, button, input, textarea, form, label, h1, h2, h3, h4, h5, h6, header, img {
 		margin:0;
 		padding:0;
-		box-sizing:content-box;
+		box-sizing:border-box;
 	}
 /* 1.0 Style podstawowe */
 	img {
@@ -115,7 +115,7 @@
 		display: inline-block;
 		background-color: #000;
 		color: #28d851;
-		font-size: 1.1em;
+		font-size: 1.2em;
 		text-align: center;
 		padding: 0.5em 1em;
 		border-radius: 0.4em;
@@ -214,7 +214,7 @@
 			width: 100%;
 		}
 		.linki-dwa-btn  span {
-			display: inline-block;
+			display: block;
 			padding: 0.5em 1em;
 		}
 
@@ -242,6 +242,10 @@
 		}
 	
 	/* 3.3 Sekcja "Proces" */
+		#proces img {
+			padding:10%;
+			margin-left:-1em;
+		}
 	/* 3.4 Sekcja "Oferta" */
 		#oferta h3 {
 			text-align:center;
