@@ -3,6 +3,16 @@
 /* 1.0 Style podstawowe */
 	/* 1.1 Typografia */
 /* 2.0 Style wielorazowe */
+	/* 2.1 Grid */
+		/* 2.1.1 Flex */
+		/* 2.1.2 Flex fallback */
+		/* 2.1.3 Float clearfix */
+/* 3.0 Style do konkretnej sekcji */
+	/* 3.1 G³ówny Header */
+	/* 3.2 Sekcja "O nas" */
+	/* 3.3 Sekcja "Proces" */
+	/* 3.4 Sekcja "Oferta" */
+	/* 3.5 Sekcja "Referencje" */
 
 /* 0.0 Zerowanie styli */
 	body, section, div, span, strong, em, p, a, ul, ol, li, figure, figcaption, button, input, textarea, form, label, h1, h2, h3, h4, h5, h6, header, img {
@@ -14,8 +24,11 @@
 	img {
 		max-width:100%;
 	}
-	body > header, main, body > footer {
-		padding:1em;
+	body > header, body > footer {
+		padding:0.5em;
+	}
+	main {
+		padding:0 0.5em;
 	}
 	a {
 		text-decoration:none;
@@ -39,23 +52,46 @@
 		  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v16/Pru33qjShpZSmG3z6VYwnRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
 		  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 		}
+		@font-face{
+			font-family:'Baloo Thambi';
+			src:url(./fonty/baloo_thambi/baloo_thambi-regular.ttf);
+		}
+		@font-face{
+			font-family:'Dosis Medium';
+			src:url(./fonty/dosis/dosis-medium.ttf);
+		}
+		@font-face{
+			font-family:'Dosis Regular';
+			src:url(./fonty/dosis/dosis-regular.ttf);
+		}
 		body {
-			font-size:10px;
+			font-size:14px;
 			font-family: 'Roboto', sans-serif;
 			font-weight:300;
 		}
+		
+		h1, h2, h3, h4, h5, h6 ,p , figcaption, a, li {
+			padding-top:0.5em;
+			padding-bottom:0.5em;
+		}
 		h1 {
-			font-size:2.4em;
+			font-size:2.3em;
 			text-transform:capitalize;
 			text-align:center;
+			font-family:'Dosis Medium';
+			font-weight:300;
 		}
 		h2{
-			font-size:2em;
+			font-size:2.1em;
 			text-transform:uppercase;
 			color:#28d851;
+			font-family:'Baloo Thambi';
+			font-weight:300;
 		}
 		h3 {
-			font-size:1.6em;
+			font-size:1.4em;
+			font-family:'Dosis Regular';
+			font-weight: 300;
 		}
 		h4{
 			font-size:1.2em;
@@ -63,16 +99,26 @@
 		h5{
 			font-size:1.1em;
 		}
+		section {
+			padding-top:1em;
+			padding-bottom:1em;
+		}
+		section > section, figure, ul, ol {
+			padding:0.5em 1em;
+		}
+		header > p:first-of-type {
+			font-size:1.2em;
+		}
+
 /* 2.0 Style wielorazowe */
 	.btn-link {
 		display: inline-block;
 		background-color: #000;
 		color: #28d851;
-		font-size: 1.6em;
+		font-size: 1.1em;
 		text-align: center;
-		padding: 0.6em 1.2em;
-		border-radius: 0.5em;
-		margin-bottom:1em;
+		padding: 0.5em 1em;
+		border-radius: 0.4em;
 	}
 	.btn-link:after {
 		content:"+";
@@ -89,3 +135,146 @@
 	.tlo-zielen {
 		background-color:#28d851;
 	}
+	.lista-licznik {
+		position: relative;
+		counter-reset:li;
+		margin-left:1em;
+	}
+	.lista-licznik > li {
+		padding:1em 0;
+	}
+	.lista-licznik > li:before {
+		font-size:1.5em;
+		color:#fff;
+		font-weight:600;
+		counter-increment:li;
+		content:counter(li);
+		position:absolute;
+		left: -0.7em;
+	}
+	.section-licznik {
+		counter-reset:section;
+		position: relative;
+	}
+	.section-licznik > section {
+		margin-left:1.8em;
+	}
+	.section-licznik > section:before {
+		font-size: 1.35em;
+		color: #fff;
+		background-color: #28d851;
+		border-radius: 0.2em;
+		font-weight: 600;
+		position: absolute;
+		left: 0.25em;
+		counter-increment: section;
+		content: counter(section);
+		padding: 0.05em;
+		line-height: 1em;
+		width: 1em;
+		text-align: center;
+		margin: 0.7em 0;
+	}
+	.plus, .eks {
+		position:relative;
+		margin-left:1.5em;
+	} 
+	.plus:before, .eks:before {
+		position:absolute;
+		left:-1.25em;
+	} 
+	.plus:before {
+		content:"+";
+		color:#28d851;
+		font-size: 2em;
+	}
+	.eks:before {
+		content:"x";
+		color:red;
+		font-size: 2em;
+	}
+	/* 2.1 Grid */
+		/* 2.1.1 Flex */
+		/* 2.1.2 Flex fallback */
+		/* 2.1.3 Float clearfix */
+			.float-fix:after {
+				content: "."; 
+				visibility: hidden; 
+				display: block; 
+				height: 0; 
+				clear: both;
+			}
+/* 3.0 Style do konkretnej sekcji */
+	/* 3.1 G³ówny Header */
+		.linki-dwa-btn {
+			text-align:center;
+			display:inline-flex;
+			justify-content:space-between;
+			align-items: center;
+			width: 100%;
+		}
+		.linki-dwa-btn  span {
+			display: inline-block;
+			padding: 0.5em 1em;
+		}
+
+	/* 3.2 Sekcja "O nas" */
+		#o-nas > div  {
+			border-radius:11px;
+		}
+		#o-nas > div > div {
+			padding:0 1em;
+		}
+		#o-nas figure img {
+			float:left;
+			margin-right:1em;
+		}
+		#o-nas figcaption strong {
+			display:block;
+		}
+		#o-nas li > ul {
+			list-style-position:outside;
+			list-style-type:'- ';
+		}
+		#o-nas li:nth-child(2){
+			padding-top:0.25em;
+			padding-bottom:0.25em;
+		}
+	
+	/* 3.3 Sekcja "Proces" */
+	/* 3.4 Sekcja "Oferta" */
+		#oferta h3 {
+			text-align:center;
+		}
+		.cena {
+			text-align:center;
+		}
+		.cena strong {
+			display: block;
+			font-size: 1.5em;
+			padding-top:2em;
+		}
+	/* 3.5 Sekcja "Referencje" */	
+		.opinie  {
+			padding:0;
+		}
+		.opinie img {
+			margin:0 auto;
+			display:block;
+		}
+		.opinie em {
+			color:#28d851;
+			font-weight:600;
+		}
+		.opinie header {
+			text-align:center;
+		}
+		.opinie h4 {
+			padding-bottom:0;
+		}
+		.brandy li {
+			width:50%;
+			float:left;
+			display:block;
+		}
+
