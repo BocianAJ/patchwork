@@ -29,11 +29,11 @@
 	img {
 		max-width:100%;
 	}
-	body > header, body > footer {
-		padding:0.5em;
+	body > header {
+		padding:3vw 3vw 0 3vw;
 	}
 	main {
-		padding:0 0.5em;
+		padding:0 3vw;
 	}
 	a {
 		text-decoration:none;
@@ -215,14 +215,22 @@
 	/* 3.1 G³ówny Header */
 		.linki-dwa-btn {
 			text-align:center;
-			display:inline-flex;
-			justify-content:space-between;
-			align-items: center;
+			display:block;
 			width: 100%;
 		}
 		.linki-dwa-btn  span {
 			display: block;
 			padding: 0.5em 1em;
+		}
+		@media (min-width:290px) {
+			.linki-dwa-btn {
+				display:inline-flex;
+				justify-content:space-between;
+				align-items: center;
+			}
+			.btn-link, .linki-dwa-btn  span {
+				display: inline-block;
+			}
 		}
 		/* 3.1.1 Górny pasek */
 		.logo {
@@ -298,6 +306,8 @@
 		.pakiet-na-miare {
 			background-color:#ebebeb;
 			background-image:url(./grafika/pakiet4.png);
+			background-size:100% auto;
+			background-position: top center;
 		}
 		.cena {
 			text-align:center;
@@ -350,6 +360,12 @@
 			box-shadow: 0.1em 0.2em 0.2em #dadada;
 		}
 	/* 3.6 Stopka */
+		#kontakt {
+			padding:0.5em 0 0 0;
+		}
+		#kontakt h2, #kontakt form, .dane-kontaktowe, .logo-stopka {
+			padding:0 3vw;
+		}
 		/* 3.6.1 Formularz kontaktowy */
 		form {
 			font-size:1.2em;
@@ -378,6 +394,7 @@
 			width:100%;
 			height:16em;
 			margin-bottom:1.5em;
+			padding: 0.5em 1em;
 		}
 		input[type="submit"] {
 			margin-left:auto;
@@ -392,8 +409,22 @@
 			border-radius:0.25em;
 		}
 		/* 3.6.2 Dane kontaktowe */
-		#kontakt section {
+		.dane-kontaktowe  {
+			color:#fff;
+			padding-bottom:1em;
+		}
+		.dane-kontaktowe section {
 			padding-left:0;
 			padding-right:0;
+		}
+
+		/* 3.6.3 Logo */
+		.logo-stopka {
+			background-color:#20be47;
+			padding-top: 1em;
+			padding-bottom: 3vw;
+		}
+		.logo-stopka img {
+			width:15em;
 		}
 
