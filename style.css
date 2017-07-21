@@ -117,14 +117,16 @@
 
 /* 2.0 Style wielorazowe */
 	.btn-link {
-		display: inline-block;
+		display: block;
 		background-color: #000;
 		color: #28d851;
 		font-size: 1.2em;
 		text-align: center;
 		padding: 0.5em 1em;
 		border-radius: 0.4em;
-		font-family:'Dosis Medium';
+		font-family: 'Dosis Medium';
+		margin: 0 auto;
+		width: 6.5em;
 	}
 	.btn-link:after {
 		content:"+";
@@ -181,23 +183,22 @@
 		text-align: center;
 		margin: 0.7em 0;
 	}
-	.plus, .eks {
+	.plus, .plus-biel ,.eks {
 		position:relative;
 		margin-left:1.5em;
 	} 
-	.plus:before, .eks:before {
-		position:absolute;
-		left:-1.25em;
-	} 
+	.plus:before, .plus-biel:before, .eks:before{
+		position: absolute;
+		left: -2.5em;
+	}
 	.plus:before {
-		content:"+";
-		color:#28d851;
-		font-size: 2em;
+		content:url(./grafika/plus-zielen.svg);
+	}
+	.plus-biel:before {
+		content:url(./grafika/plus-biel.svg);
 	}
 	.eks:before {
-		content:"x";
-		color:red;
-		font-size: 2em;
+		content:url(./grafika/eks.svg);
 	}
 	/* 2.1 Grid */
 		/* 2.1.1 Flex */
@@ -231,7 +232,7 @@
 			float:left;
 		}
 		.menu-mobilne {
-			width:30%;
+			width:15%;
 			max-width:50px;
 			float:right;
 		}
@@ -271,6 +272,33 @@
 			text-align:center;
 			font-size:1.8em;
 		}
+		#oferta > section {
+			margin:2em 0;
+		}
+		.pakiet-tlo {
+			background-size:auto 85%;
+			background-position: bottom right;
+			background-repeat: no-repeat;
+			border-radius:0.5em;
+			border:none;
+		}
+		.pakiet-3razy {
+			background-color:#ebebeb;
+			background-image:url(./grafika/pakiet1.png);
+		}
+		.pakiet-mala-firma {
+			background-color:#28d851;
+			color:#fff;
+			background-image:url(./grafika/pakiet2.png);
+		}
+		.pakiet-duza-firma {
+			background-color:#ebebeb;
+			background-image:url(./grafika/pakiet3.png);
+		}
+		.pakiet-na-miare {
+			background-color:#ebebeb;
+			background-image:url(./grafika/pakiet4.png);
+		}
 		.cena {
 			text-align:center;
 		}
@@ -279,6 +307,11 @@
 			font-size: 1.6em;
 			padding-top:2em;
 		}
+		#oferta .btn-link {
+			margin-top: 1em;
+			margin-bottom: 1.5em;
+		}
+
 	/* 3.5 Sekcja "Referencje" */	
 		.opinie  {
 			padding:0;
