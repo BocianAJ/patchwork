@@ -246,6 +246,14 @@
 		}
 		nav {
 			clear:both;
+			background-color:#28d851;
+			padding:1em;
+		}
+		nav a {
+			color: #fff;
+			font-size: 1.2em;
+			display: block;
+			text-transform: uppercase;
 		}
 	/* 3.2 Sekcja "O nas" */
 		#o-nas > div  {
@@ -318,6 +326,7 @@
 			padding-top:2em;
 		}
 		#oferta .btn-link {
+			display: block;
 			margin-top: 1em;
 			margin-bottom: 1.5em;
 		}
@@ -340,6 +349,9 @@
 		}
 		.opinie h4 {
 			padding-bottom:0;
+		}
+		.brandy ul {
+			padding:0;
 		}
 		.brandy li {
 			width:50%;
@@ -416,6 +428,12 @@
 		.dane-kontaktowe section {
 			padding-left:0;
 			padding-right:0;
+		}
+		.dane-kontaktowe ul {			
+			padding:0;
+		}
+		.dane-kontaktowe li {			
+			padding-top:0;
 		}
 
 		/* 3.6.3 Logo */
