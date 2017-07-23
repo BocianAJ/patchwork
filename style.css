@@ -239,6 +239,7 @@
 		}
 		/* 3.1.1 Górny pasek */
 		body > header {
+			padding-top:2vw;
 			margin-top:15%;
 		}
 		#top-bar {
@@ -246,24 +247,25 @@
 			left:0;
 			right:0;
 			top:0;
-			padding:0 3vw;
+			padding:1vw 3vw;
 			background-color:#fff;
 			z-index:100;
 			border-bottom: #28d85180 1px solid;
 			box-shadow: 0 1px 0.5em #28d8514d;			
 		}
 		.logo {
-			height:3em;
+			height:2.5em;
 			width:auto;
 			display:block;
 			float:left;
+			padding:0;
 		}
 		.menu-mobilne {
-			height:3em;
+			height:2.5em;
 			width:auto;
 			float:right;
-			padding-top:0.25em;
-			padding-bottom:0.25em;
+			padding-top:0.2em;
+			padding-bottom:0.2em;
 			margin-left: 1em;
 			background-color:transparent;
 		}
