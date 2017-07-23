@@ -233,6 +233,17 @@
 			}
 		}
 		/* 3.1.1 Górny pasek */
+		body > header {
+			margin-top:15%;
+		}
+		#top-bar {
+			position: fixed;
+			left:0;
+			right:0;
+			top:0;
+			padding:0 3vw;
+			background-color:#fff;			
+		}
 		.logo {
 			width:60%;
 			max-width:250px;
@@ -240,7 +251,7 @@
 			float:left;
 		}
 		.menu-mobilne {
-			width:15%;
+			width:12%;
 			max-width:50px;
 			float:right;
 		}
@@ -248,6 +259,7 @@
 			clear:both;
 			background-color:#28d851;
 			padding:1em;
+			display:none;
 		}
 		nav a {
 			color: #fff;
@@ -255,6 +267,7 @@
 			display: block;
 			text-transform: uppercase;
 		}
+
 	/* 3.2 Sekcja "O nas" */
 		#o-nas > div  {
 			border-radius:11px;
