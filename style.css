@@ -10,6 +10,7 @@
 /* 3.0 Style do konkretnej sekcji */
 	/* 3.1 G³ówny Header */
 		/* 3.1.1 Górny pasek */
+		/* 3.1.2 Menu animacja*/
 	/* 3.2 Sekcja "O nas" */
 	/* 3.3 Sekcja "Proces" */
 	/* 3.4 Sekcja "Oferta" */
@@ -27,7 +28,8 @@
 	}
 /* 1.0 Style podstawowe */
 	img {
-		max-width:100%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 	body > header {
 		padding:3vw 3vw 0 3vw;
@@ -41,6 +43,9 @@
 	button {
 		background-color:transparent;
 		border:none;
+	}
+	button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+		cursor:pointer;
 	}
 	ul {
 		list-style:none;
@@ -199,7 +204,7 @@
 	}
 	.eks:before {
 		content:url(./grafika/eks.svg);
-	}
+	} 
 	/* 2.1 Grid */
 		/* 2.1.1 Flex */
 		/* 2.1.2 Flex fallback */
@@ -242,30 +247,69 @@
 			right:0;
 			top:0;
 			padding:0 3vw;
-			background-color:#fff;			
+			background-color:#fff;
+			z-index:100;			
 		}
 		.logo {
-			width:60%;
-			max-width:250px;
+			height:3em;
+			width:auto;
 			display:block;
 			float:left;
 		}
 		.menu-mobilne {
-			width:12%;
-			max-width:50px;
+			height:3em;
+			width:auto;
 			float:right;
+			padding-top:0.25em;
+			padding-bottom:0.25em;
+			margin-left: 1em;
+			background-color:#fff;
+		}
+		.zamknij {
+			display:none;
 		}
 		nav {
 			clear:both;
 			background-color:#28d851;
 			padding:1em;
-			display:none;
+			position: absolute;
+			width: 100vw;
+			height:100vh;
+			left: 0;
+			top: 3em;
+			transform:scaleY(0.001);
+			transform-origin:top;
+			transition:transform 1s;
 		}
 		nav a {
 			color: #fff;
-			font-size: 1.2em;
+			font-size: 8vw;
+			padding-top:10vw;
 			display: block;
 			text-transform: uppercase;
+			font-family:'Baloo Thambi';
+			margin-left:4em;
+		}
+		/* 3.1.2 Menu animacja*/
+		.menu-mobilne:hover + nav, .menu-mobilne:focus + nav, .menu-mobilne:active + nav, nav:hover, nav:focus, nav:active {
+			display:block;
+			transform:scaleY(1);
+			transition:transform 1s;
+		}
+		nav:hover + .zamknij, nav:focus + .zamknij, nav:active + .zamknij {
+			position: absolute;
+			z-index: 100;
+			top: 0;
+			right: 3vw;
+			display: block;
+		}
+		nav a:hover:before, nav a:focus:before, nav a:active:before {
+			content:url(./grafika/kolko.svg);
+			position:absolute;
+			left:3em;
+			display:inline;
+			padding-right:1em;
+			z-index:100;
 		}
 
 	/* 3.2 Sekcja "O nas" */
@@ -372,17 +416,49 @@
 			display:block;
 		}
 		/* 3.5.1 Slider */
-		button.slider {
+		.slider {
+			position:relative;
+		}
+		.slider > section {
+			padding:1em 3em;
+		}
+		.slider button {
 			background-color: #28d851;
 			color:#fff;
-			font-size: 1.6em;
-			line-height: 1em;
-			width: 1.5em;
-			height: 1.5em;
+			width: 2em;
+			height: 2em;
 			padding: 0.25em;
 			border-radius: 1.5em;
 			box-sizing: content-box;
 			box-shadow: 0.1em 0.2em 0.2em #dadada;
+			position:absolute;
+			top:50%;
+			bottom:50%;
+			z-index: 99;
+		}
+		button.do-tylu {
+			left:0;
+		}
+		button.do-przodu {
+			right:0;
+		}
+		.ukryty {
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:97;
+			transform: scaleX(0.01);
+			display:none;
+		}
+		.ukryty.do-tylu {
+			transform-origin: left;
+		}
+		.ukryty.do-przodu {
+			transform-origin: right;
+		}
+		.widoczny {
+			position:relative;
+			z-index:98;
 		}
 	/* 3.6 Stopka */
 		#kontakt {
@@ -392,7 +468,9 @@
 			padding:0 3vw;
 		}
 		/* 3.6.1 Formularz kontaktowy */
-		form {
+		#kontakt form {
+			padding-top:1em;
+			padding-bottom:1em;
 			font-size:1.2em;
 		}
 		label  {
@@ -420,6 +498,7 @@
 			height:16em;
 			margin-bottom:1.5em;
 			padding: 0.5em 1em;
+			max-width: 100%;
 		}
 		input[type="submit"] {
 			margin-left:auto;
@@ -456,6 +535,7 @@
 			padding-bottom: 3vw;
 		}
 		.logo-stopka img {
-			width:15em;
+			width: auto;
+			height: 1.8em;
 		}
 
