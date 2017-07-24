@@ -29,6 +29,7 @@
 /* 1.0 Style podstawowe */
 	img {
 		max-width: 100%;
+		max-height: 100%;
 		height: auto;
 		width:100%;
 	}
