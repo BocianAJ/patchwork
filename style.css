@@ -320,7 +320,7 @@
 			display:inline-block;
 		}
 		nav a:hover:before, nav a:focus:before, nav a:active:before {
-			content:url('grafika/kolko.svg');
+			content:"\25CF";
 			position: absolute;
 			left:0;
 			display:inline-block;
