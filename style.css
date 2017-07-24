@@ -311,11 +311,15 @@
 			display: block;
 			text-transform: uppercase;
 			font-family:'Baloo Thambi';
+			visibility:hidden;
 		}
 		/* 3.1.2 Menu animacja*/
 		.menu-mobilne:hover ~ .menu-linki, .menu-mobilne:focus ~ .menu-linki, .menu-mobilne:active ~ .menu-linki, .menu-linki:hover, .menu-linki:focus, .menu-linki:active {
 			transform:scaleY(1);
 			transition:transform 1s;
+		}
+		.menu-mobilne:hover ~ .menu-linki a, .menu-mobilne:focus ~ .menu-linki a, .menu-mobilne:active ~ .menu-linki a, .menu-linki:hover a, .menu-linki:focus a, .menu-linki:active a {
+			visibility:visible;
 		}
 		.menu-mobilne:hover ~ .zamknij, .menu-mobilne:focus ~ .zamknij, .menu-mobilne:active ~ .zamknij, .menu-linki:hover ~ .zamknij, .menu-linki:focus ~ .zamknij, .menu-linki:active ~ .zamknij {
 			display:inline-block;
