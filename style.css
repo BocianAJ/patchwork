@@ -29,6 +29,8 @@
 /* 1.0 Style podstawowe */
 	img {
 		max-width: 100%;
+		height: auto;
+		width:100%;
 	}
 	body > header {
 		padding:3vw 3vw 0 3vw;
