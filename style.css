@@ -290,7 +290,7 @@
 			transform: scaleY(0.0001);
 			transform-origin: top;
 			transition: transform 1s;
-			z-index:99;
+			z-index:100;
 		}
 		nav {
 			display: block;
