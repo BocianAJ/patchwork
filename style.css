@@ -174,6 +174,7 @@
 	}
 	.section-licznik > section {
 		margin-left:1.8em;
+		position: relative;
 	}
 	.section-licznik > section:before {
 		font-size: 1.35em;
@@ -182,7 +183,7 @@
 		border-radius: 0.2em;
 		font-weight: 600;
 		position: absolute;
-		left: 0.25em;
+		left:-1.3em;
 		counter-increment: section;
 		content: counter(section);
 		padding: 0.05em;
