@@ -257,6 +257,10 @@
 			border-bottom: rgba(40, 216, 81, 0.5) 1px solid;
 			box-shadow: 0 1px 0.5em rgba(40, 216, 81, 0.3);			
 		}
+		#top-bar img {
+			height:100%;
+			width:auto;
+		}
 		.logo {
 			height:2.5em;
 			width:auto;
@@ -277,7 +281,6 @@
 			display:none;
 		}
 		.menu-linki {
-			clear: both;
 			background-color: #28d851;
 			display: block;
 			padding: 1em;
@@ -293,6 +296,7 @@
 			z-index:100;
 		}
 		nav {
+			position:relative;
 			display: block;
 			margin: 0 auto;
 			width: 11ex;
@@ -305,7 +309,6 @@
 			display: block;
 			text-transform: uppercase;
 			font-family:'Baloo Thambi';
-			position:relative;
 		}
 		/* 3.1.2 Menu animacja*/
 		.menu-mobilne:hover ~ .menu-linki, .menu-mobilne:focus ~ .menu-linki, .menu-mobilne:active ~ .menu-linki, .menu-linki:hover, .menu-linki:focus, .menu-linki:active {
@@ -318,8 +321,8 @@
 		nav a:hover:before, nav a:focus:before, nav a:active:before {
 			content: url(./grafika/kolko.svg);
 			position: absolute;
-			left: -1em;
-			display: inline-block;
+			left:0;
+			display:inline-block;
 			padding-right: 1em;
 			z-index: 100;
 		}
