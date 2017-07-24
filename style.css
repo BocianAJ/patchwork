@@ -34,7 +34,7 @@
 	body > header {
 		padding:3vw 3vw 0 3vw;
 	}
-	main {
+	main > section {
 		padding:0 3vw;
 	}
 	a {
@@ -52,6 +52,9 @@
 	}
 	em {
 		font-style:normal;
+	}
+	br {
+		font-family:Arial; /* bug w Edge z czcionk¹ Roboto */
 	}
 	/* 1.1 Typografia */
 		/* latin-ext */
@@ -250,8 +253,8 @@
 			padding:1vw 3vw;
 			background-color:#fff;
 			z-index:100;
-			border-bottom: #28d85180 1px solid;
-			box-shadow: 0 1px 0.5em #28d8514d;			
+			border-bottom: rgba(40, 216, 81, 0.5) 1px solid;
+			box-shadow: 0 1px 0.5em rgba(40, 216, 81, 0.3);			
 		}
 		.logo {
 			height:2.5em;
@@ -271,9 +274,8 @@
 		}
 		.zamknij {
 			display:none;
-			margin-right:10px;
 		}
-		nav {
+		.menu-linki {
 			clear: both;
 			background-color: #28d851;
 			display: block;
@@ -284,9 +286,14 @@
 			position: absolute;
 			left: 0;
 			top: 2.5em;
-			transform: scaleY(0.001);
+			transform: scaleY(0.0001);
 			transform-origin: top;
 			transition: transform 1s;
+		}
+		nav {
+			display: block;
+			margin: 0 auto;
+			width: 20em;
 		}
 		nav a {
 			color: #fff;
@@ -295,15 +302,14 @@
 			display: block;
 			text-transform: uppercase;
 			font-family:'Baloo Thambi';
-			margin-left:4em;
 			position:relative;
 		}
 		/* 3.1.2 Menu animacja*/
-		.menu-mobilne:hover ~ nav, .menu-mobilne:focus ~ nav, .menu-mobilne:active ~ nav, nav:hover, nav:focus, nav:active {
+		.menu-mobilne:hover ~ .menu-linki, .menu-mobilne:focus ~ .menu-linki, .menu-mobilne:active ~ .menu-linki, .menu-linki:hover, .menu-linki:focus, .menu-linki:active {
 			transform:scaleY(1);
 			transition:transform 1s;
 		}
-		.menu-mobilne:hover ~ .zamknij, .menu-mobilne:focus ~ .zamknij, .menu-mobilne:active ~ .zamknij, nav:hover ~ .zamknij, nav:focus ~ .zamknij, nav:active ~ .zamknij {
+		.menu-mobilne:hover ~ .zamknij, .menu-mobilne:focus ~ .zamknij, .menu-mobilne:active ~ .zamknij, .menu-linki:hover ~ .zamknij, .menu-linki:focus ~ .zamknij, .menu-linki:active ~ .zamknij {
 			display:inline-block;
 		}
 		nav a:hover:before, nav a:focus:before, nav a:active:before {
