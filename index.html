@@ -7,13 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Bielkowski</title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script src="skrypty.js"></script>
 </head>
 
-<body>
+<body onload="aktywnySkrypt()">
 	<header>
 		<div id="top-bar">
 			<a href="#" class="logo"><img src="grafika/logo.svg" alt="logotyp"/></a>
-			<button class="menu-mobilne float-fix"><img src="grafika/menu-hamburger.svg" alt="menu mobilne"/></button>
+			<button class="menu-mobilne float-fix" onclick="pokazMenu()"><img src="grafika/menu-hamburger.svg" alt="menu mobilne"/></button>
 			<div class="menu-linki">
 				<nav>
 					<a href="#o-nas">O nas</a>
@@ -22,7 +23,7 @@
 					<a href="#referencje">Referencje</a>
 				</nav>
 			</div>
-			<button class="menu-mobilne zamknij"><img src="grafika/menu-zamknij.svg" alt="menu mobilne"/></button>
+			<button class="menu-mobilne zamknij" onclick="schowajMenu()"><img src="grafika/menu-zamknij.svg" alt="menu mobilne"/></button>
 		</div>
 		<h1><em class="txt-zielen">Doradztwo</em> biznesowe</h1>
 		<p>Mądrze wspomagamy Twoje cele i napędzamy rozwój</p>
